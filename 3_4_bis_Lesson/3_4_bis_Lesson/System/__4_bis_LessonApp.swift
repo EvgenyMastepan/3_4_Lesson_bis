@@ -14,13 +14,6 @@ enum Pages {
     case Main
 }
 
-// Общий класс
-class AppViewModel: ObservableObject {
-    @Published var currentPage: Pages = .Authorisation
-    @Published var email: String = ""
-    @Published var password: String = ""
-}
-
 @main
 struct __4_bis_LessonApp: App {
     // Экземпляр общего класса экранов приложения
@@ -35,7 +28,7 @@ struct __4_bis_LessonApp: App {
                 AuthorisationView()
                     .environmentObject(viewModel)
             case .Registration:
-                Text("Authorisation")
+                RegistrationView()
                     .environmentObject(viewModel)
             case .Main:
                 MainView()

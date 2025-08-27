@@ -13,7 +13,9 @@
 		753ABC822E5EBFDB00CF3C42 /* AuthorisationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753ABC812E5EBFDA00CF3C42 /* AuthorisationView.swift */; };
 		753ABC842E5ED27200CF3C42 /* CommonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753ABC832E5ED27200CF3C42 /* CommonStyles.swift */; };
 		753ABC862E5ED35500CF3C42 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753ABC852E5ED35500CF3C42 /* Extensions.swift */; };
-		753ABC882E5EE1DC00CF3C42 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753ABC872E5EE1DC00CF3C42 /* Main.swift */; };
+		753ABC882E5EE1DC00CF3C42 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753ABC872E5EE1DC00CF3C42 /* MainView.swift */; };
+		753ABC8A2E5EE4B900CF3C42 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753ABC892E5EE4B900CF3C42 /* RegistrationView.swift */; };
+		753ABC8C2E5EE5C700CF3C42 /* CommonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753ABC8B2E5EE5C700CF3C42 /* CommonClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +26,9 @@
 		753ABC812E5EBFDA00CF3C42 /* AuthorisationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorisationView.swift; sourceTree = "<group>"; };
 		753ABC832E5ED27200CF3C42 /* CommonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonStyles.swift; sourceTree = "<group>"; };
 		753ABC852E5ED35500CF3C42 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		753ABC872E5EE1DC00CF3C42 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		753ABC872E5EE1DC00CF3C42 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		753ABC892E5EE4B900CF3C42 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		753ABC8B2E5EE5C700CF3C42 /* CommonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +61,8 @@
 		753ABC722E5EBCF600CF3C42 /* 3_4_bis_Lesson */ = {
 			isa = PBXGroup;
 			children = (
-				753ABC832E5ED27200CF3C42 /* CommonStyles.swift */,
-				753ABC852E5ED35500CF3C42 /* Extensions.swift */,
-				753ABC732E5EBCF600CF3C42 /* __4_bis_LessonApp.swift */,
-				753ABC812E5EBFDA00CF3C42 /* AuthorisationView.swift */,
-				753ABC872E5EE1DC00CF3C42 /* Main.swift */,
+				753ABC8D2E5EE6C100CF3C42 /* System */,
+				753ABC8E2E5EE6CD00CF3C42 /* Views */,
 				753ABC772E5EBD0000CF3C42 /* Assets.xcassets */,
 				753ABC792E5EBD0000CF3C42 /* Preview Content */,
 			);
@@ -74,6 +75,27 @@
 				753ABC7A2E5EBD0000CF3C42 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		753ABC8D2E5EE6C100CF3C42 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				753ABC832E5ED27200CF3C42 /* CommonStyles.swift */,
+				753ABC852E5ED35500CF3C42 /* Extensions.swift */,
+				753ABC732E5EBCF600CF3C42 /* __4_bis_LessonApp.swift */,
+				753ABC8B2E5EE5C700CF3C42 /* CommonClass.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		753ABC8E2E5EE6CD00CF3C42 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				753ABC812E5EBFDA00CF3C42 /* AuthorisationView.swift */,
+				753ABC872E5EE1DC00CF3C42 /* MainView.swift */,
+				753ABC892E5EE4B900CF3C42 /* RegistrationView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				753ABC882E5EE1DC00CF3C42 /* Main.swift in Sources */,
+				753ABC8C2E5EE5C700CF3C42 /* CommonClass.swift in Sources */,
+				753ABC882E5EE1DC00CF3C42 /* MainView.swift in Sources */,
 				753ABC822E5EBFDB00CF3C42 /* AuthorisationView.swift in Sources */,
 				753ABC842E5ED27200CF3C42 /* CommonStyles.swift in Sources */,
+				753ABC8A2E5EE4B900CF3C42 /* RegistrationView.swift in Sources */,
 				753ABC742E5EBCF600CF3C42 /* __4_bis_LessonApp.swift in Sources */,
 				753ABC862E5ED35500CF3C42 /* Extensions.swift in Sources */,
 			);

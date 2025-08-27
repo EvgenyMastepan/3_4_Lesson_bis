@@ -49,9 +49,3 @@ struct AuthorisationView: View {
         }
     }
 }
-
-//struct AuthorisationView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AuthorisationView()
-//    }
-//}
