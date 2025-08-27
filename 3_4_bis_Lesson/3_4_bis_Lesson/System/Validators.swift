@@ -9,19 +9,19 @@ import Foundation
 
 struct Validators {
     
-    // MARK: - Проверка на пустоту
+    // MARK: - Чапаев и пустота
     static func isNotEmpty(_ string: String) -> Bool {
         !string.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
     
-    // MARK: - Проверка email
+    // MARK: - Без мыла не пролезешь
     static func isValidEmail(_ email: String) -> Bool {
         let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
         return emailPredicate.evaluate(with: email)
     }
     
-    // MARK: - Проверка пароля
+    // MARK: - Скажи пароль? пароль!
     static func isValidPassword(_ password: String) -> Bool {
         // Минимум 5 символов
         guard password.count >= 5 else { return false }
@@ -39,7 +39,7 @@ struct Validators {
         return true
     }
     
-    // MARK: - Проверка имени/фамилии
+    // MARK: - ФИО
     static func isValidName(_ name: String) -> Bool {
         let trimmedName = name.trimmingCharacters(in: .whitespacesAndNewlines)
         // Минимум 2 символа, только буквы
@@ -49,7 +49,7 @@ struct Validators {
         return lettersPredicate.evaluate(with: trimmedName)
     }
     
-    // MARK: - Полная проверка регистрации
+    // MARK: - Всем и всего
     static func validateRegistration(
         email: String,
         password: String,
