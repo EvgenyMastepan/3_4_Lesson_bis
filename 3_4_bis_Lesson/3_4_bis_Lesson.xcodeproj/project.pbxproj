@@ -16,6 +16,13 @@
 		753ABC882E5EE1DC00CF3C42 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753ABC872E5EE1DC00CF3C42 /* MainView.swift */; };
 		753ABC8A2E5EE4B900CF3C42 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753ABC892E5EE4B900CF3C42 /* RegistrationView.swift */; };
 		753ABC8C2E5EE5C700CF3C42 /* CommonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753ABC8B2E5EE5C700CF3C42 /* CommonClass.swift */; };
+		753ABC902E5F2A2800CF3C42 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753ABC8F2E5F2A2800CF3C42 /* RegistrationViewModel.swift */; };
+		753ABC922E5F305600CF3C42 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753ABC912E5F305600CF3C42 /* User.swift */; };
+		753ABC952E5F30C400CF3C42 /* AuthorisationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753ABC942E5F30C400CF3C42 /* AuthorisationViewModel.swift */; };
+		753ABC972E5F319900CF3C42 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753ABC962E5F319900CF3C42 /* MainViewModel.swift */; };
+		753ABC992E5F31E700CF3C42 /* AuthorisationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753ABC982E5F31E700CF3C42 /* AuthorisationService.swift */; };
+		753ABC9B2E5F323B00CF3C42 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753ABC9A2E5F323B00CF3C42 /* AppViewModel.swift */; };
+		753ABC9D2E5F3B0900CF3C42 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753ABC9C2E5F3B0900CF3C42 /* Validators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +36,13 @@
 		753ABC872E5EE1DC00CF3C42 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		753ABC892E5EE4B900CF3C42 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		753ABC8B2E5EE5C700CF3C42 /* CommonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonClass.swift; sourceTree = "<group>"; };
+		753ABC8F2E5F2A2800CF3C42 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		753ABC912E5F305600CF3C42 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		753ABC942E5F30C400CF3C42 /* AuthorisationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorisationViewModel.swift; sourceTree = "<group>"; };
+		753ABC962E5F319900CF3C42 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		753ABC982E5F31E700CF3C42 /* AuthorisationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorisationService.swift; sourceTree = "<group>"; };
+		753ABC9A2E5F323B00CF3C42 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		753ABC9C2E5F3B0900CF3C42 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +75,7 @@
 		753ABC722E5EBCF600CF3C42 /* 3_4_bis_Lesson */ = {
 			isa = PBXGroup;
 			children = (
+				753ABC932E5F306B00CF3C42 /* Model */,
 				753ABC8D2E5EE6C100CF3C42 /* System */,
 				753ABC8E2E5EE6CD00CF3C42 /* Views */,
 				753ABC772E5EBD0000CF3C42 /* Assets.xcassets */,
@@ -82,8 +97,8 @@
 			children = (
 				753ABC832E5ED27200CF3C42 /* CommonStyles.swift */,
 				753ABC852E5ED35500CF3C42 /* Extensions.swift */,
-				753ABC732E5EBCF600CF3C42 /* __4_bis_LessonApp.swift */,
-				753ABC8B2E5EE5C700CF3C42 /* CommonClass.swift */,
+				753ABC982E5F31E700CF3C42 /* AuthorisationService.swift */,
+				753ABC9C2E5F3B0900CF3C42 /* Validators.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -92,10 +107,25 @@
 			isa = PBXGroup;
 			children = (
 				753ABC812E5EBFDA00CF3C42 /* AuthorisationView.swift */,
+				753ABC942E5F30C400CF3C42 /* AuthorisationViewModel.swift */,
 				753ABC872E5EE1DC00CF3C42 /* MainView.swift */,
+				753ABC962E5F319900CF3C42 /* MainViewModel.swift */,
 				753ABC892E5EE4B900CF3C42 /* RegistrationView.swift */,
+				753ABC8F2E5F2A2800CF3C42 /* RegistrationViewModel.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		753ABC932E5F306B00CF3C42 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				753ABC732E5EBCF600CF3C42 /* __4_bis_LessonApp.swift */,
+				753ABC9A2E5F323B00CF3C42 /* AppViewModel.swift */,
+				753ABC8B2E5EE5C700CF3C42 /* CommonClass.swift */,
+				753ABC912E5F305600CF3C42 /* User.swift */,
+			);
+			name = Model;
+			path = System;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,10 +201,17 @@
 				753ABC8C2E5EE5C700CF3C42 /* CommonClass.swift in Sources */,
 				753ABC882E5EE1DC00CF3C42 /* MainView.swift in Sources */,
 				753ABC822E5EBFDB00CF3C42 /* AuthorisationView.swift in Sources */,
+				753ABC9B2E5F323B00CF3C42 /* AppViewModel.swift in Sources */,
 				753ABC842E5ED27200CF3C42 /* CommonStyles.swift in Sources */,
+				753ABC992E5F31E700CF3C42 /* AuthorisationService.swift in Sources */,
 				753ABC8A2E5EE4B900CF3C42 /* RegistrationView.swift in Sources */,
+				753ABC922E5F305600CF3C42 /* User.swift in Sources */,
+				753ABC9D2E5F3B0900CF3C42 /* Validators.swift in Sources */,
+				753ABC902E5F2A2800CF3C42 /* RegistrationViewModel.swift in Sources */,
 				753ABC742E5EBCF600CF3C42 /* __4_bis_LessonApp.swift in Sources */,
 				753ABC862E5ED35500CF3C42 /* Extensions.swift in Sources */,
+				753ABC952E5F30C400CF3C42 /* AuthorisationViewModel.swift in Sources */,
+				753ABC972E5F319900CF3C42 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

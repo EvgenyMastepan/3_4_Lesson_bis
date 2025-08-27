@@ -7,27 +7,45 @@
 
 import SwiftUI
 
-struct AuthorisationView: View {
-    @EnvironmentObject var viewModel: AppViewModel
+struct AuthorizationView: View {
+    @EnvironmentObject var appViewModel: AppViewModel
+    @StateObject private var viewModel = AuthorizationViewModel()
     
     var body: some View {
         GeometryReader { geometry in
-                    let topIndent = geometry.size.height / 6
-        ZStack {
-            Color.black.ignoresSafeArea()
-                // Собственно вёрстка.
+            let topIndent = geometry.size.height / 6
+            
+            ZStack {
+                Color.black.ignoresSafeArea()
+                
                 VStack {
                     Text("Авторизация")
                         .titleTextStyle()
                         .padding(.top, topIndent)
-                    TextField("email", text: $viewModel.email)
+                    
+                    TextField("Email", text: $viewModel.email)
                         .commonTextFieldStyle()
+                        .textContentType(.emailAddress)
+                        .autocapitalization(.none)
                         .padding(.top, topIndent)
-                    SecureField("password", text: $viewModel.password)
+                    
+                    SecureField("Пароль", text: $viewModel.password)
                         .commonTextFieldStyle()
+                        .textContentType(.password)
                         .padding(.top, 20)
+                    
+                    if let error = viewModel.errorMessage {
+                        Text(error)
+                            .foregroundColor(.red)
+                            .padding(.top, 10)
+                    }
+                    
                     Button {
-                        viewModel.currentPage = .Main
+                        viewModel.login { success in
+                            if success {
+                                appViewModel.navigateToMain()
+                            }
+                        }
                     } label: {
                         Text("Войти")
                     }
@@ -35,13 +53,13 @@ struct AuthorisationView: View {
                     .padding(.top, 48)
                     
                     Button {
-                        viewModel.currentPage = .Registration
+                        appViewModel.navigateToRegistration()
                     } label: {
                         Text("Регистрация")
                             .foregroundColor(.white)
                     }
                     .padding(.top, 40)
-                        
+                    
                     Spacer()
                 }
                 .padding(.horizontal, 30)

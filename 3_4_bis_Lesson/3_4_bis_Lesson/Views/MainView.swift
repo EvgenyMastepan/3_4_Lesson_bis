@@ -8,27 +8,36 @@
 import SwiftUI
 
 struct MainView: View {
-    @EnvironmentObject var viewModel: AppViewModel
+    @EnvironmentObject var appViewModel: AppViewModel
+    @StateObject private var viewModel = MainViewModel()
     
     var body: some View {
         GeometryReader { geometry in
-                    let topIndent = geometry.size.height / 6
-        ZStack {
-            Color.black.ignoresSafeArea()
-                // Собственно вёрстка.
+            let topIndent = geometry.size.height / 6
+            
+            ZStack {
+                Color.black.ignoresSafeArea()
+                
                 VStack {
                     Text("Приветствую")
                         .titleTextStyle()
                         .padding(.top, topIndent)
-                    Text(viewModel.firstName)
-                        .titleTextStyle()
-                        .padding(.top, 21)
-                    Text(viewModel.lastName)
-                        .titleTextStyle()
-                        .padding(.top, 21)
+                    
+                    if let user = appViewModel.currentUser {
+                        Text(user.firstName)
+                            .titleTextStyle()
+                            .padding(.top, 21)
+                        
+                        Text(user.lastName)
+                            .titleTextStyle()
+                            .padding(.top, 21)
+                    }
+                    
                     Spacer()
+                    
                     Button {
-                        viewModel.currentPage = .Authorisation
+                        appViewModel.clearUser()
+                        appViewModel.navigateToAuthorization()
                     } label: {
                         Text("Выйти")
                     }
@@ -36,6 +45,11 @@ struct MainView: View {
                     .padding(.bottom, 102)
                 }
                 .padding(.horizontal, 30)
+            }
+        }
+        .onAppear {
+            if appViewModel.currentUser == nil {
+                viewModel.loadUserData()
             }
         }
     }

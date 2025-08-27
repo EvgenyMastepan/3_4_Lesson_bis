@@ -25,13 +25,18 @@ struct __4_bis_LessonApp: App {
             // Переключатель экранов
             switch viewModel.currentPage {
             case .Authorisation:
-                AuthorisationView()
+                AuthorizationView()
                     .environmentObject(viewModel)
             case .Registration:
                 RegistrationView()
                     .environmentObject(viewModel)
             case .Main:
                 MainView()
+                    .environmentObject(viewModel)
+                
+            // Для обработки будущих случаев в enum
+            @unknown default:
+                AuthorizationView()
                     .environmentObject(viewModel)
                 
             }
